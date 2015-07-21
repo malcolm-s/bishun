@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>electron es6 react boilerplate</title>
+  </head>
+
+  <body>
+  </body>
+  <style type="text/css">
+    .spinner {
+      animation: rotate 1s ease-in-out;
+      -webkit-animation: rotate 2s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes rotate {
+      from  {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(720deg);
+      }
+    }
+  </style>
+  <script>
+    // install babel hooks in the renderer process
+    require('babel/register');
+
+    var React = require('react');
+    var Main = require('./components/App.jsx');
+
+    React.render(React.createElement(Main, null), document.body);
+  </script>
+</html>
